@@ -1,1 +1,76 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@include mat.core();
+
+$blue-artnet-palette: (
+ 50: #edf0ff,
+ 100: #d2dbed,
+ 200: #b9c2d9,
+ 300: #9faac5,
+ 400: #8a96b4,
+ 500: #7684a5,
+ 600: #677593,
+ 700: #55617b,
+ 800: #454e64,
+ 900: #31394c,
+ contrast: (
+   50: #31394c,
+   100: #31394c,
+   200: #31394c,
+   300: #31394c,
+   400: #31394c,
+   500: #EFF0EB,
+   600: #EFF0EB,
+   700: #EFF0EB,
+   800: #EFF0EB,
+   900: #EFF0EB,
+
+ )
+);
+$yellow-artnet-palette: (
+ 50: #fffdec,
+ 100: #fff8ce,
+ 200: #fff3ae,
+ 300: #ffee90,
+ 400: #ffe97a,
+ 500: #fde466,
+ 600: #f2d865,
+ 700: #ddc25e,
+ 800: #c7ab58,
+ 900: #a2864f,
+ contrast: (
+   50: #31394c,
+   100: #31394c,
+   200: #31394c,
+   300: #31394c,
+   400: #31394c,
+   500: #31394c,
+   600: #31394c,
+   700: #EFF0EB,
+   800: #EFF0EB,
+   900: #EFF0EB,
+
+ )
+);
+
+$custom-app-primary: mat.define-palette($blue-artnet-palette);
+$custom-app-secondaty: mat.define-palette($yellow-artnet-palette);
+$custom-app-warn: mat.define-palette(mat.$red-palette);
+
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-app-primary,
+    accent: $custom-app-secondaty,
+    warn: $custom-app-secondaty,
+  )
+ ));
+
+ @include mat.all-component-themes($custom-theme);
+ @include mat.core-theme($custom-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
