@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carrossel-botoes',
@@ -8,19 +8,12 @@ import { AfterViewInit, Component, ElementRef } from '@angular/core';
 export class CarrosselBotoesComponent {
   constructor(private elementRef: ElementRef) {}
 
-  ngAfterViewInit() {
-    const carouselContainer = this.elementRef.nativeElement.querySelector('.carousel-container');
-    const carousel = carouselContainer.querySelector('.carousel');
-    const carouselItems = carouselContainer.querySelectorAll('.carousel-item');
-
-    const centerItemIndex = Math.floor(carouselItems.length / 2);
-    const centerItem = carouselItems[centerItemIndex] as HTMLElement;
-
-    carousel.scrollTo({
-      left: centerItem.offsetLeft - (carouselContainer.offsetWidth - centerItem.offsetWidth) / 2,
-      behavior: 'smooth'
-    });
+  ngOnInit() {
+    this.centerThirdButton();
   }
+  
+
+
 
   moveCarousel(direction: string) {
     const carouselContainer = this.elementRef.nativeElement.querySelector('.carousel-container');
@@ -43,4 +36,18 @@ export class CarrosselBotoesComponent {
       });
     }
   }
+  
+  private centerThirdButton() {
+    const carouselContainer = this.elementRef.nativeElement.querySelector('.carousel-container');
+    const carousel = carouselContainer.querySelector('.carousel');
+    const carouselItems = carouselContainer.querySelectorAll('.carousel-item');
+    const thirdButton = carouselItems[2] as HTMLElement;
+
+    carousel.scrollTo({
+      left: thirdButton.offsetLeft - (carouselContainer.offsetWidth - thirdButton.offsetWidth) / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  
 }
