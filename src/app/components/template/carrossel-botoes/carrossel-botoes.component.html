@@ -4,12 +4,12 @@
     </button>
   
     <div class="carousel">
-      <button mat-raised-button class="carousel-item">Button 1</button>
-      <button mat-raised-button class="carousel-item">Button 2</button>
-      <button mat-raised-button class="carousel-item">Button 3</button>
-      <button mat-raised-button class="carousel-item">Button 4</button>
-      <button mat-raised-button class="carousel-item">Button 5</button>
-      <button mat-raised-button class="carousel-item">Button 6</button>
+      <button mat-raised-button class="carousel-item" (click)="centerButton('0')">Button 1</button>
+      <button mat-raised-button class="carousel-item" (click)="centerButton('1')">Button 2</button>
+      <button mat-raised-button class="carousel-item" (click)="centerButton('2')">Button 3</button>
+      <button mat-raised-button class="carousel-item" (click)="centerButton('3')">Button 4</button>
+      <button mat-raised-button class="carousel-item" (click)="centerButton('4')">Button 5</button>
+      <button mat-raised-button class="carousel-item" (click)="centerButton('5')">Button 6</button>
     </div>
   
     <button mat-icon-button class="carousel-button" (click)="moveCarousel('right')">

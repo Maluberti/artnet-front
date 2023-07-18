@@ -8,12 +8,12 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 export class CarrosselBotoesComponent {
   constructor(private elementRef: ElementRef) {}
 
-  ngOnInit() {
-    this.centerThirdButton();
-  }
+  i = 0;
   
 
-
+  ngOnInit() {
+    this.centerButton(2);
+  }
 
   moveCarousel(direction: string) {
     const carouselContainer = this.elementRef.nativeElement.querySelector('.carousel-container');
@@ -28,25 +28,38 @@ export class CarrosselBotoesComponent {
         left: -firstItem.offsetWidth,
         behavior: 'smooth'
       });
-    } else if (direction === 'right') {
-      carousel.append(firstItem);
+    } 
+    else if (direction === 'right') {
+      if (this.i !== 0){
+        carousel.append(firstItem)
+      }
       carousel.scrollBy({
         left: firstItem.offsetWidth,
         behavior: 'smooth'
       });
+      this.i = this.i + 1;
     }
   }
-  
-  private centerThirdButton() {
+
+  j=0;
+
+  centerButton(buttonNum: any) {
     const carouselContainer = this.elementRef.nativeElement.querySelector('.carousel-container');
     const carousel = carouselContainer.querySelector('.carousel');
     const carouselItems = carouselContainer.querySelectorAll('.carousel-item');
-    const thirdButton = carouselItems[2] as HTMLElement;
+    const firstItem = carouselItems[0] as HTMLElement;
+    const widthButton = firstItem.offsetWidth;
+    const clikedButton = carouselItems[buttonNum] as HTMLElement;
+  
 
-    carousel.scrollTo({
-      left: thirdButton.offsetLeft - (carouselContainer.offsetWidth - thirdButton.offsetWidth) / 2,
+    if (this.j > 1){
+      carousel.append(firstItem)
+    }
+    carousel.scrollBy({
+      left: clikedButton.offsetLeft - (carouselContainer.offsetWidth/2 - widthButton/2) - 87,   //offsetleft nao atualiza depois de clicar em um botao
       behavior: 'smooth'
     });
+    this.j = this.j + 1;
   }
 
   
