@@ -1,6 +1,6 @@
+
 .header {
-    height: 7%;
-    color: #31394C;
+    height: 50px;
 }
 
 .example-spacer {
@@ -8,5 +8,16 @@
   }
 
 button{
+    font-size: 15px;
     margin: 0 15px;
+    border-radius: 30px;
+    
+
+}
+.home {
+    font-size: 20px;
+    font-family: "El Messiri";
+}
+.login{
+    background-color: #9faac5;
 }

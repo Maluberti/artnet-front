@@ -30,7 +30,7 @@ $blue-artnet-palette: (
  )
 );
 $yellow-artnet-palette: (
- 50: #fffdec,
+ 50: #EFF0EB,
  100: #fff8ce,
  200: #fff3ae,
  300: #ffee90,
@@ -55,15 +55,15 @@ $yellow-artnet-palette: (
  )
 );
 
-$custom-app-primary: mat.define-palette($blue-artnet-palette);
-$custom-app-secondaty: mat.define-palette($yellow-artnet-palette);
+$custom-app-primary: mat.define-palette($blue-artnet-palette,900,300);
+$custom-app-secondaty: mat.define-palette($yellow-artnet-palette,800,50);
 $custom-app-warn: mat.define-palette(mat.$red-palette);
 
 $custom-theme: mat.define-light-theme((
   color: (
     primary: $custom-app-primary,
     accent: $custom-app-secondaty,
-    warn: $custom-app-secondaty,
+    warn: $custom-app-warn,
   )
  ));
 
