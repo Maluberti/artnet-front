@@ -15,13 +15,17 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { CarrosselBotoesComponent } from './components/template/carrossel-botoes/carrossel-botoes.component';
+import { ImagesComponent } from './components/template/images/images.component';
+import { ImageComponent } from './components/template/images/image/image.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CarrosselBotoesComponent
+    CarrosselBotoesComponent,
+    ImagesComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

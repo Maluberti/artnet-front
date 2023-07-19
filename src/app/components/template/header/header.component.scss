@@ -1,6 +1,7 @@
 
 .header {
     height: 50px;
+    flex: 1 1 auto;
 }
 
 .example-spacer {
@@ -8,16 +9,20 @@
   }
 
 button{
-    font-size: 15px;
+    flex: 0 1 auto;
+
     margin: 0 15px;
     border-radius: 30px;
     
 
 }
 .home {
-    font-size: 20px;
+
     font-family: "El Messiri";
 }
+.cadastro{
+    flex: 0 1 auto;
+}
 .login{
-    background-color: #9faac5;
+    flex: 0 1 auto;
 }

@@ -1,0 +1,19 @@
+
+.container {
+  display: flex;
+  width: fit-content;
+  @media (min-width: 1630px) {
+    width: 1600px;
+    margin: auto
+  }
+  
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.subcontainer{
+  flex: 1 0 300px; /* Cresce, encolhe e tem largura mínima de 200px */
+  box-sizing: border-box;
+}

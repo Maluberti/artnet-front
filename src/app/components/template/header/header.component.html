@@ -2,7 +2,10 @@
 <mat-toolbar class = "header" color="primary">
       <button mat-button class = "home">ARTNET</button>
       <span class="example-spacer"></span>
-      <button mat-raised-button color="accent" >Cadastre-se</button>
-      <button mat-raised-button  [ngStyle]="{ 'background-color': '#9faac5' }">Login</button>
+      <div>
+            <button mat-raised-button color="accent" class = "cadastro">Cadastre-se</button>
+            <button mat-raised-button  [ngStyle]="{ 'background-color': '#9faac5' }" class = "login">Login</button>
+      </div>
+      
 </mat-toolbar>
 
