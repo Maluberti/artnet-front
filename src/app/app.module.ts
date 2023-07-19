@@ -21,6 +21,7 @@ import { LoginFormComponent } from './components/views/login-form/login-form.com
 import { HomeComponent } from './components/views/home/home.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { CadastroComponent } from './components/views/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     CarrosselBotoesComponent,
     ImagesComponent,
     ImageComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     LoginFormComponent,

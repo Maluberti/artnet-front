@@ -1,0 +1,102 @@
+.cadastro-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    align-items: center;
+    background: rgba(140, 162, 176, 0.60);/* Translucidez definida pelo último valor (0.5) */
+    .close{
+        display:flex;
+        margin-left: 350px;
+        @media (max-width: 500px) {
+            margin-left: 250px;
+          }
+        margin-bottom: -10%;
+    }
+
+}
+  
+  .cadastro-box {
+    .wk-text{
+        color: #31394C;
+        margin-top: 0%;
+        text-align: center;
+        font-family: El Messiri;
+        h2{
+            font-size: 30px;
+            margin-bottom: 0%;
+        }
+        p{
+            margin-top: 1%;
+            font-size: 18px;
+        }
+    }
+   
+    width: 400px;
+    height: 500px;
+    @media (max-width: 500px) {
+        width: 300px;
+      }
+    
+    border-radius: 30px;
+    background: #EFF0EB;
+    
+      
+  }
+
+form{
+    
+    margin-top: 50px;
+    .form-group{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+        mat-form-field{
+            margin-bottom: 30px;
+            width: 350px;
+            @media (max-width: 500px) {
+                width: 250px;
+              }
+            
+        }
+      }
+
+    .entrar{
+
+
+      width: 350px;
+      height: 50px;
+      border-radius: 10px;
+      @media (max-width: 500px) {
+          width: 250px;
+        }
+      color: #EFF0EB;
+      text-align: center;
+      font-family: El Messiri;
+      font-size: 24px;
+      
+    }
+
+    .noAccont{
+      margin-top: 0%;
+      color: #c7ab58;
+      text-align: center;
+      font-size: 16px;
+      font-family: El Messiri;
+      font-weight: 400;
+        .cadastre{
+          text-align: center;
+          align-content: center;
+          color: #c7ab58;
+          font-family: El Messiri;
+          font-weight: 600;
+        }
+    }
+
+}
+
