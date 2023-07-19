@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./images.component.scss']
 })
 export class ImagesComponent {
+  
 
 }

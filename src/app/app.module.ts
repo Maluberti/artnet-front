@@ -17,7 +17,10 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { CarrosselBotoesComponent } from './components/template/carrossel-botoes/carrossel-botoes.component';
 import { ImagesComponent } from './components/template/images/images.component';
 import { ImageComponent } from './components/template/images/image/image.component';
-
+import { LoginFormComponent } from './components/views/login-form/login-form.component';
+import { HomeComponent } from './components/views/home/home.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,11 @@ import { ImageComponent } from './components/template/images/image/image.compone
     HeaderComponent,
     CarrosselBotoesComponent,
     ImagesComponent,
-    ImageComponent
+    ImageComponent,
+    HomeComponent
   ],
   imports: [
+    LoginFormComponent,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -35,6 +40,8 @@ import { ImageComponent } from './components/template/images/image/image.compone
     MatIconModule,
     MatButtonModule,
     MatButtonToggleModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
