@@ -11,19 +11,24 @@
     background: rgba(140, 162, 176, 0.60);/* Translucidez definida pelo último valor (0.5) */
     .close{
         display:flex;
-        margin-left: 350px;
-        @media (max-width: 500px) {
-            margin-left: 250px;
-          }
-        margin-bottom: -10%;
+        margin-left: 85%;
+        
+    }
+    .cadastro-box{
+        margin-top: 0%;
     }
 
 }
   
   .cadastro-box {
+    max-height: 80vh; /* Defina aqui a altura máxima desejada em relação à altura da tela */
+    overflow-y: auto;
+    
+    justify-content: center;
+    margin-top:0cap;
     .wk-text{
         color: #31394C;
-        margin-top: 0%;
+        margin-top: -10%;
         text-align: center;
         font-family: El Messiri;
         h2{
@@ -36,10 +41,10 @@
         }
     }
    
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 80%;
     @media (max-width: 500px) {
-        width: 300px;
+        width: 400px;
       }
     
     border-radius: 30px;
@@ -49,22 +54,23 @@
   }
 
 form{
-    
-    margin-top: 50px;
-    .form-group{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
+    height: 70%;
+    mat-stepper{
+        background-color: #EFF0EB;
+        height: 70%;
         mat-form-field{
-            margin-bottom: 30px;
+            height: 70%;
+            margin-bottom: 0%;
             width: 350px;
             @media (max-width: 500px) {
-                width: 250px;
-              }
+                    width: 280px;
+            }
+        
+    }
+    
             
-        }
-      }
+    }
+    
 
     .entrar{
 
@@ -82,21 +88,31 @@ form{
       
     }
 
-    .noAccont{
-      margin-top: 0%;
-      color: #c7ab58;
-      text-align: center;
-      font-size: 16px;
-      font-family: El Messiri;
-      font-weight: 400;
-        .cadastre{
-          text-align: center;
-          align-content: center;
-          color: #c7ab58;
-          font-family: El Messiri;
-          font-weight: 600;
-        }
-    }
+    
 
 }
 
+.mat-stepper-vertical {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+
+  .noAccont{
+    margin-top: -10px;
+    color: #c7ab58;
+    text-align: center;
+    font-size: 16px;
+    font-family: El Messiri;
+    font-weight: 400;
+      .entrar{
+        padding: -30px -10px;
+        text-align: center;
+        align-content: center;
+        color: #c7ab58;
+        font-family: El Messiri;
+        font-weight: 600;
+      }
+  }
